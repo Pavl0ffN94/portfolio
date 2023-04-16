@@ -1,0 +1,166 @@
+@import './reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap');
+
+/*
+font-family: 'Oswald', sans-serif;
+font-family: 'Source Sans Pro', sans-serif;
+*/
+
+:root {
+  --black: #171718;
+  --black-border: #26292d;
+  --white: #fff;
+  --purple: #5c62ec;
+
+  --text-dark: var(--black);
+  --dark-bg: var(--black);
+  --dark-border: var(--black-border);
+  --header-text: var(--white);
+  --accent: var(--purple);
+}
+
+html,
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  letter-spacing: -0.5px;
+  color: var(--text-dark);
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1200px;
+}
+
+/* Nav*/
+
+.nav {
+  background-color: var(--dark-bg);
+  color: var(--header-text);
+  padding: 20px 0;
+  border: 1px solid var(--dark-border);
+  letter-spacing: normal;
+}
+
+.nav-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 40px;
+  row-gap: 20px;
+}
+
+.logo {
+  color: var(--header-text);
+  font-size: 24px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.logo strong {
+  font-weight: 700;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  column-gap: 40px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Oswald', sans-serif;
+}
+
+.nav-list__link {
+  color: var(--header-text);
+  transition: opacity 0.15s ease-in;
+}
+
+.nav-list__link:hover {
+  opacity: 0.8;
+}
+
+.nav-list__link--active {
+  position: relative;
+}
+
+.nav-list__link--active::before {
+  content: ' ';
+
+  position: absolute;
+  left: 0;
+  top: 100%;
+
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: var(--accent);
+}
+
+/* Header*/
+
+.header {
+  padding: 40px;
+  min-height: 695px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--dark-bg);
+  color: var(--header-text);
+  text-align: center;
+}
+
+.header_wrapper {
+  padding: 0 15px;
+  max-width: 660px;
+}
+
+.btn {
+  display: inline-block;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  padding: 12px 28px;
+  background-color: var(--accent);
+  color: var(--header-text);
+  border-radius: 10px;
+  transition: opacity 0.15s ease-in;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn:active {
+  position: relative;
+  top: 2px;
+}
+
+.header_title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.header_title strong {
+  font-family: 'Oswald', sans-serif;
+  font-size: 60px;
+  font-weight: 700;
+}
+
+.header_title em {
+  color: var(--accent);
+  font-style: normal;
+}
+
+.header_text {
+  font-size: 18px;
+  line-height: 1.333;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.header_text p + p {
+  margin-top: 1em;
+}
