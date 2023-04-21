@@ -440,6 +440,9 @@ body {
   .dark-mode-btn {
     order: 0;
   }
+  .btn-outline {
+    align-items: center;
+  }
 
   /* Projects  */
 
